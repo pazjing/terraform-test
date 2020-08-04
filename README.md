@@ -27,6 +27,7 @@ SSH private key file with ${ssh_key_name}.pem as name should be put in the same 
 - #### Apply
     `input.tfvars` holds variables which should be overriden with valid ones.
     ```
+    terraform init
     terraform apply -var-file="input.tfvars" 
     ```
     ```
