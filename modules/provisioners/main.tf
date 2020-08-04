@@ -32,7 +32,7 @@ resource "null_resource" "provisioner" {
   // get the word which occurs most on the page and print it in console
   provisioner "local-exec" {
     command = <<EOF
-      scp -i ${var.ssh_key_name} -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ec2-user@${var.instance_ip}:/home/ec2-user/result.txt result.txt; 
+      scp -i ${var.ssh_key_name}.pem -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ec2-user@${var.instance_ip}:/home/ec2-user/result.txt result.txt; 
       cat result.txt
     EOF
   }
