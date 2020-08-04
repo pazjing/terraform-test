@@ -1,0 +1,10 @@
+Risk 
+=======================================
+1. A more security way to input aws secret key. Use profile setting or variable setting in repository host setting might be better.
+2. ssh key management. If a key pair is given by organization, we should use it instead the current way.
+3. Need security review for the security group and network ACL rule, expecially the allow cidr_block should set to proper one.
+4. For real case, should not use HTTP for NGINX。 HTTPS should be use.
+5. As provisioner is not recommended by terraform, it is better to use other way. like, put scripts to s3, or use command on userdata
+6. Use the default python on ec2 which is python 2. It is better to use python 3.
+7. The AMI I select might not be avaiable on all region. 
+8. It is better to build a self own ami. 
